@@ -56,7 +56,7 @@ const Upcoming = () => {
       }
       const data = await response.json();
       setEvents(data);
-      console.log(data);
+      
     } catch (error) {
       console.error('Error fetching events:', error);
     }
@@ -142,7 +142,7 @@ const Upcoming = () => {
 
 
   const handleInputChange = (selectedOptions) => {
-    const selectedValues = selectedOptions.map(option => option.value); // Extract IDs from selected options
+    const selectedValues = selectedOptions.map(option => option.value); 
     setFormData({ ...formData, facilitators: selectedValues });
   };
 
@@ -161,7 +161,7 @@ const Upcoming = () => {
       learning_outcomes: formData.learning_outcomes
     };
 
-    console.log('Data being sent:', eventData); // Log the data being sent
+    
 
     if (isEditing) {
       fetch(`${eventsUrl} ${currentEvent.id}/`, {
@@ -184,7 +184,7 @@ const Upcoming = () => {
         })
         .catch(error => {
           console.error('Error updating event:', error);
-          // Display error message to the user
+          
         });
     } else {
       fetch(eventsUrl, {
@@ -207,7 +207,7 @@ const Upcoming = () => {
         })
         .catch(error => {
           console.error('Error adding event:', error);
-          // Display error message to the user
+        
         });
     }
   };
@@ -219,7 +219,7 @@ const Upcoming = () => {
 
   const onClose = () => {
     setShowEventModal(false);
-    setSelectedEvent(null); // Optionally reset selectedEvent state
+    setSelectedEvent(null); 
   };
 
 
@@ -285,7 +285,7 @@ const Upcoming = () => {
             <Form.Group controlId='eventType'>
               <Form.Label>Event Type</Form.Label>
               <Form.Control
-                type='text'  // Change to text input as per your requirement
+                type='text'  
                 name='event_type'
                 value={formData.event_type}
                 onChange={(e) => setFormData({ ...formData, event_type: e.target.value })}

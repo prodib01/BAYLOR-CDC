@@ -47,7 +47,7 @@ const Participants = () => {
             if (response.ok) {
                 const data = await response.json();
                 setParticipants(data);
-                console.log(data);
+                
             } else {
                 console.error('Failed to fetch participants:', response.status, response.statusText);
             }
@@ -73,7 +73,7 @@ const Participants = () => {
             if (response.ok) {
                 const data = await response.json();
                 setAgeGroups(data);
-                console.log('Age groups fetched successfully:', data);
+                
             } else {
                 console.error('Failed to fetch age groups:', response.status, response.statusText);
             }

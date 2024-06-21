@@ -39,19 +39,19 @@ const Closed = () => {
       }
       const data = await response.json();
       setEvents(data);
-      console.log(data);
+      
     } catch (error) {
       console.error('Error fetching events:', error);
     }
   };
 
-  const today = new Date().toLocaleDateString(); // Get today's date without time
+  const today = new Date().toLocaleDateString(); 
   const filteredEvents = events.filter(event => {
     const eventEndDate = new Date(event.end_date).toLocaleDateString();
     return eventEndDate < today;
   });
   
-  console.log(filteredEvents);
+  
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -83,7 +83,7 @@ const Closed = () => {
 
   const onClose = () => {
     setShowEventModal(false);
-    setSelectedEvent(null); // Optionally reset selectedEvent state
+    setSelectedEvent(null);
   };
     
   return (

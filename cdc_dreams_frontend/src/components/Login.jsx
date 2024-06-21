@@ -19,7 +19,7 @@ const Login = () => {
                 },
                 body: JSON.stringify({ username, password }),
             });
-            console.log('Response', response);
+           
 
 
             if (!response.ok) {
@@ -28,7 +28,7 @@ const Login = () => {
 
             const data = await response.json();
             localStorage.setItem('token', data.token);
-            console.log('Login successful', data);
+            
             navigate('/dashboard');
             
         } catch (error) {

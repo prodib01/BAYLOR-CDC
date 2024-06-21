@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaEdit, FaTrash } from 'react-icons/fa';
-import { Modal, Button, Form } from 'react-bootstrap'; // Assuming Bootstrap is used for Modal and Form
+import { Modal, Button, Form } from 'react-bootstrap'; 
 
 
 const Facilitators = () => {

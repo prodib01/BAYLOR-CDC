@@ -42,7 +42,7 @@ const Progress = () => {
                     throw new Error('Failed to fetch participants');
                 }
                 const data = await response.json();
-                console.log('Participants:', data);
+                
                 setParticipants(data);
             } catch (error) {
                 console.error('Error fetching participants:', error);
@@ -80,7 +80,7 @@ const Progress = () => {
                 }
                 const data = await response.json();
                 setAttendances(data);
-                setFilteredAttendances(data); // Initialize filtered attendances
+                setFilteredAttendances(data); 
             } catch (error) {
                 console.error('Error fetching attendances:', error);
             }
@@ -94,7 +94,6 @@ const Progress = () => {
     useEffect(() => {
         if (selectedEvent) {
             const filtered = attendances.filter(attendance => attendance.event.toString() === selectedEvent);
-            console.log('Filtered Attendances:', filtered);
             setFilteredAttendances(filtered);
         } else {
             setFilteredAttendances(attendances);

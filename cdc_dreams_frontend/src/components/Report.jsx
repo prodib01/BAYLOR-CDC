@@ -53,7 +53,7 @@ const Report = () => {
       const today = new Date();
       const now = new Date().toLocaleDateString();
       
-      // Separate events into upcoming, ongoing, and closed
+     
       const upcoming = data.filter(event => new Date(event.start_date) > today);
       const ongoing = data.filter(event => {
         const eventStartDate = new Date(event.start_date).toLocaleDateString();
@@ -61,14 +61,14 @@ const Report = () => {
       });
       const closed = data.filter(event => new Date(event.end_date) < today);
   
-      // Map events to include event_attendances
+     
       const eventsWithAttendances = data.map(event => ({
         id: event.id,
         name: event.name,
-        event_attendances: event.event_attendances || [] // Assuming event_attendances is an array
+        event_attendances: event.event_attendances || [] 
       }));
   
-      // Update state with counts and events with attendances
+      
       setUpcomingEvents(upcoming.length);
       setOngoingEvents(ongoing.length);
       setClosedEvents(closed.length);

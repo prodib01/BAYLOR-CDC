@@ -35,7 +35,7 @@ const Age = () => {
       setAge(data);
     } catch (error) {
       console.error('Error fetching age groups:', error);
-      // Handle error state, e.g., show an error message to the user
+      
     }
   };
   
