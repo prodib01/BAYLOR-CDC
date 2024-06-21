@@ -1,0 +1,9 @@
+__pycache__/
+/logs/
+
+# sqlite
+*.sqlite3
+
+/venv/
+
+*.log

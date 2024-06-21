@@ -1,0 +1,153 @@
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f0f2f5;
+}
+
+
+.side-bar {
+  width: 250px;
+  background-color: #343a40;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+}
+
+.company-info {
+  text-align: center;
+  flex: 1; 
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  
+}
+
+.company-logo {
+  width: 100%;
+  height: auto;
+  max-height: 80%; 
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+
+.side-bar-links {
+  flex: 5; 
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+
+.link-item {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  margin: 35px 0;
+  padding: 8px;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.link-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(3px);
+}
+
+.link-item svg {
+  margin-right: 10px;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: white;
+  color: #343a40;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.nav-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.notification-icon,
+.logout-icon {
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #343a40;
+  transition: color 0.3s;
+}
+
+.notification-icon:hover,
+.logout-icon:hover {
+  color: #007bff;
+}
+
+
+.content {
+  flex-grow: 1;
+}
+
+.content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .side-bar {
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  .nav-bar {
+    justify-content: space-between;
+  }
+}
+
+.dropdown {
+  margin-right: 22px; 
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-item {
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}

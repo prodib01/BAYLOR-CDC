@@ -1,0 +1,159 @@
+.progress-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-container {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.add-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.progress-table {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+table thead {
+    background-color: #007bff;
+    color: white;
+}
+
+table th,
+table td {
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+table tbody tr {
+    transition: background-color 0.2s;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.view-button {
+    color: #28a745;
+}
+
+.view-button:hover {
+    color: #218838;
+    transform: scale(1.2);
+}
+
+.edit-button {
+    color: #ffc107;
+    margin: 0 5px;
+}
+
+.edit-button:hover {
+    color: #e0a800;
+    transform: scale(1.2);
+}
+
+.delete-button {
+    color: #dc3545;
+}
+
+.delete-button:hover {
+    color: #c82333;
+    transform: scale(1.2);
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.page-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin: 0 2px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.page-button.active {
+    background-color: #0056b3;
+}
+
+.page-button:hover {
+    background-color: #0056b3;
+}
+
+.page-button:focus {
+    outline: none;
+}
+
+
+.event-selection-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.event-selection-container label {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.event-selection-container select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.event-selection-container select:hover,
+.event-selection-container select:focus {
+    border-color: #007bff;
+}
+
+.event-selection-container select option {
+    padding: 10px;
+    font-size: 16px;
+}
